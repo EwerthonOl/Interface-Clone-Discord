@@ -1,0 +1,109 @@
+/*====  RESET ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  --header-height: 4.5rem;
+
+  /* rgb color mode */
+  --first-color: #202225;
+  --first-header: #34373c;
+  --aside-color: #2f3136;
+  --three-color: #36393f;
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --body-font: 'DM Sans', sans-serif;
+}
+
+#initialPage {
+  display: flex;
+  font-family: var(--body-font);
+}
+
+#sideLeft {
+  width: 4.5rem;
+  height: 100vh;
+
+  background-color: var(--first-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 12px 0 0;
+}
+
+#sideLeft .groups {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--three-color);
+  border-radius: 50%;
+
+  margin: 0 0 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.1s;
+}
+
+#sideLeft .groups:hover {
+  border-radius: 30%;
+  background-color: #3ba55d;
+  cursor: pointer;
+}
+
+/* ========== ISSO PODE SER UMA CLASSE CSS ====== */
+#sideLeft .groups:hover::before {
+  content: '';
+  width: 0.5rem;
+  height: 2rem;
+
+  border-radius: 40%;
+
+  background-color: white;
+
+  position: absolute;
+
+  left: -0.3rem;
+}
+
+.svg {
+  color: #3ba55d;
+}
+
+.groups:hover .svg {
+  color: #fefffe;
+}
+
+.solid {
+  width: 2rem;
+  height: 2px;
+
+  margin-bottom: 0.5rem;
+
+  border-radius: 1px;
+
+  border-color: hsla(0, 0%, 100%, 0.06);
+}
